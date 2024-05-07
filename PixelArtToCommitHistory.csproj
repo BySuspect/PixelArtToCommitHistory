@@ -50,16 +50,26 @@
     <Compile Include="Helpers\CommitHelper.cs" />
     <Compile Include="Helpers\DateHelper.cs" />
     <Compile Include="Helpers\GithubGraphDateOfYears.cs" />
+    <Compile Include="Helpers\MathC.cs" />
     <Compile Include="Pages\MainPage.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="Pages\MainPage.Designer.cs">
       <DependentUpon>MainPage.cs</DependentUpon>
     </Compile>
+    <Compile Include="Pages\ProgressPage.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Pages\ProgressPage.Designer.cs">
+      <DependentUpon>ProgressPage.cs</DependentUpon>
+    </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <EmbeddedResource Include="Pages\MainPage.resx">
       <DependentUpon>MainPage.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Pages\ProgressPage.resx">
+      <DependentUpon>ProgressPage.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
