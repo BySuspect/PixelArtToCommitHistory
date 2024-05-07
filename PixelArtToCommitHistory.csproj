@@ -49,6 +49,7 @@
     <Compile Include="Helpers\CMDHelper.cs" />
     <Compile Include="Helpers\CommitHelper.cs" />
     <Compile Include="Helpers\DateHelper.cs" />
+    <Compile Include="Helpers\GithubGraphDateOfYears.cs" />
     <Compile Include="Pages\MainPage.cs">
       <SubType>Form</SubType>
     </Compile>
