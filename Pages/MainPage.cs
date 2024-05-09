@@ -108,6 +108,7 @@ namespace PixelArtToCommitHistory.Pages
             }
 
             CMDHelper.runCMD("git push", txtFolderPath.Text);
+            pbCommit.Value = 0;
             MessageBox.Show("Done!");
 
             btnPush.Enabled = true;

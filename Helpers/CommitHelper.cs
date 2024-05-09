@@ -42,9 +42,7 @@ namespace PixelArtToCommitHistory.Helpers
 
         private static char ConvertPixel(Color color)
         {
-            if (color.R is 0 && color.G is 0 && color.B is 0)
-                return ' ';
-            else if (color.A is 0)
+            if ((color.R is 0 && color.G is 0 && color.B is 0) || color.A is 0)
                 return ' ';
             else
                 return '*';
