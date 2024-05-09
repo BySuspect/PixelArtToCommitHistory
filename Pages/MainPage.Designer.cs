@@ -10,7 +10,8 @@
         /// <summary>
         /// Clean up any resources being used.
         /// </summary>
-        /// <param name="disposing">true if managed resources should be disposed; otherwise, false.</param>
+        /// <param name="disposing">true if managed resources should be
+        ///     disposed; otherwise, false.</param>
         protected override void Dispose(bool disposing)
         {
             if (disposing && (components != null))
@@ -23,8 +24,8 @@
         #region Windows Form Designer generated code
 
         /// <summary>
-        /// Required method for Designer support - do not modify
-        /// the contents of this method with the code editor.
+        /// Required method for Designer support - do not modify the contents of
+        /// this method with the code editor.
         /// </summary>
         private void InitializeComponent()
         {
@@ -77,6 +78,8 @@
             this.label2.Size = new System.Drawing.Size(80, 13);
             this.label2.TabIndex = 1;
             this.label2.Text = "Git Folder Path:";
+            this.label2.MouseDown += new System.Windows.Forms.MouseEventHandler(this.FormMouseDown);
+            this.label2.MouseMove += new System.Windows.Forms.MouseEventHandler(this.FormMouseMove);
             // 
             // label4
             // 
@@ -86,6 +89,8 @@
             this.label4.Size = new System.Drawing.Size(64, 13);
             this.label4.TabIndex = 1;
             this.label4.Text = "Image Path:";
+            this.label4.MouseDown += new System.Windows.Forms.MouseEventHandler(this.FormMouseDown);
+            this.label4.MouseMove += new System.Windows.Forms.MouseEventHandler(this.FormMouseMove);
             // 
             // txtImagePath
             // 
@@ -130,6 +135,8 @@
             this.label1.Size = new System.Drawing.Size(29, 13);
             this.label1.TabIndex = 1;
             this.label1.Text = "Year";
+            this.label1.MouseDown += new System.Windows.Forms.MouseEventHandler(this.FormMouseDown);
+            this.label1.MouseMove += new System.Windows.Forms.MouseEventHandler(this.FormMouseMove);
             // 
             // MainPage
             // 
@@ -149,6 +156,8 @@
             this.Name = "MainPage";
             this.Text = "MainPage";
             this.Load += new System.EventHandler(this.MainPage_Load);
+            this.MouseDown += new System.Windows.Forms.MouseEventHandler(this.FormMouseDown);
+            this.MouseMove += new System.Windows.Forms.MouseEventHandler(this.FormMouseMove);
             this.ResumeLayout(false);
             this.PerformLayout();
 

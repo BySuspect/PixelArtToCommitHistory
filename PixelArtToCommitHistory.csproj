@@ -32,6 +32,9 @@
     <ErrorReport>prompt</ErrorReport>
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
+  <PropertyGroup>
+    <ApplicationIcon>icon.ico</ApplicationIcon>
+  </PropertyGroup>
   <ItemGroup>
     <Reference Include="System" />
     <Reference Include="System.Core" />
@@ -49,7 +52,6 @@
     <Compile Include="Helpers\CMDHelper.cs" />
     <Compile Include="Helpers\CommitHelper.cs" />
     <Compile Include="Helpers\DateHelper.cs" />
-    <Compile Include="Helpers\GithubGraphDateOfYears.cs" />
     <Compile Include="Helpers\MathC.cs" />
     <Compile Include="Pages\MainPage.cs">
       <SubType>Form</SubType>
@@ -79,6 +81,7 @@
     <Compile Include="Properties\Resources.Designer.cs">
       <AutoGen>True</AutoGen>
       <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
     </Compile>
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
@@ -92,6 +95,36 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="EmptyTemplates\graph-2001.png" />
+    <Content Include="EmptyTemplates\graph-2002.png" />
+    <Content Include="EmptyTemplates\graph-2003.png" />
+    <Content Include="EmptyTemplates\graph-2004.png" />
+    <Content Include="EmptyTemplates\graph-2005.png" />
+    <Content Include="EmptyTemplates\graph-2006.png" />
+    <Content Include="EmptyTemplates\graph-2007.png" />
+    <Content Include="EmptyTemplates\graph-2008.png" />
+    <Content Include="EmptyTemplates\graph-2009.png" />
+    <Content Include="EmptyTemplates\graph-2010.png" />
+    <Content Include="EmptyTemplates\graph-2011.png" />
+    <Content Include="EmptyTemplates\graph-2012.png" />
+    <Content Include="EmptyTemplates\graph-2013.png" />
+    <Content Include="EmptyTemplates\graph-2014.png" />
+    <Content Include="EmptyTemplates\graph-2015.png" />
+    <Content Include="EmptyTemplates\graph-2016.png" />
+    <Content Include="EmptyTemplates\graph-2017.png" />
+    <Content Include="EmptyTemplates\graph-2018.png" />
+    <Content Include="EmptyTemplates\graph-2019.png" />
+    <Content Include="EmptyTemplates\graph-2020.png" />
+    <Content Include="EmptyTemplates\graph-2021.png" />
+    <Content Include="EmptyTemplates\graph-2022.png" />
+    <Content Include="EmptyTemplates\graph-2023.png" />
+    <Content Include="EmptyTemplates\graph-2024.png" />
+    <Content Include="icon.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="SamplePixelArts\" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

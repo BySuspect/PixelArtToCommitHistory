@@ -10,7 +10,8 @@
         /// <summary>
         /// Clean up any resources being used.
         /// </summary>
-        /// <param name="disposing">true if managed resources should be disposed; otherwise, false.</param>
+        /// <param name="disposing">true if managed resources should be
+        ///     disposed; otherwise, false.</param>
         protected override void Dispose(bool disposing)
         {
             if (disposing && (components != null))
@@ -23,8 +24,8 @@
         #region Windows Form Designer generated code
 
         /// <summary>
-        /// Required method for Designer support - do not modify
-        /// the contents of this method with the code editor.
+        /// Required method for Designer support - do not modify the contents of
+        /// this method with the code editor.
         /// </summary>
         private void InitializeComponent()
         {
@@ -38,6 +39,8 @@
             this.pbar.Name = "pbar";
             this.pbar.Size = new System.Drawing.Size(431, 10);
             this.pbar.TabIndex = 0;
+            this.pbar.MouseDown += new System.Windows.Forms.MouseEventHandler(this.FormMouseDown);
+            this.pbar.MouseMove += new System.Windows.Forms.MouseEventHandler(this.FormMouseMove);
             // 
             // ProgressPage
             // 
@@ -51,6 +54,8 @@
             this.ShowInTaskbar = false;
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterParent;
             this.Text = "ProgressPage";
+            this.MouseDown += new System.Windows.Forms.MouseEventHandler(this.FormMouseDown);
+            this.MouseMove += new System.Windows.Forms.MouseEventHandler(this.FormMouseMove);
             this.ResumeLayout(false);
 
         }

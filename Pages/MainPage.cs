@@ -1,13 +1,8 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
-using System.Diagnostics;
 using System.Drawing;
 using System.IO;
 using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows.Forms;
 using PixelArtToCommitHistory.Helpers;
 
@@ -40,19 +35,6 @@ namespace PixelArtToCommitHistory.Pages
                 return;
             }
             btnCommit.Enabled = false;
-            var startTime = GithubGraphDateOfYears
-                .Dates.First(x => x.Year == cbYear.SelectedItem.ToString())
-                .StartDate;
-            var endTime = GithubGraphDateOfYears
-                .Dates.First(x => x.Year == cbYear.SelectedItem.ToString())
-                .EndDate;
-
-            if (DateTime.Compare(startTime, endTime) >= 0)
-            {
-                MessageBox.Show("Start date cannot be greater or equal than end date.");
-                btnCommit.Enabled = true;
-                return;
-            }
 
             if (txtFolderPath.Text == "")
             {
@@ -91,8 +73,7 @@ namespace PixelArtToCommitHistory.Pages
                 await CommitHelper.StartCommit(
                     txtImagePath.Text,
                     txtFolderPath.Text,
-                    startTime,
-                    endTime
+                    int.Parse((string)cbYear.SelectedItem)
                 );
                 MessageBox.Show("Commits are redy for push!");
             }
@@ -188,5 +169,24 @@ namespace PixelArtToCommitHistory.Pages
                 }
             }
         }
+
+        #region Mouse move codes
+        private Point _mouseLoc;
+
+        private void FormMouseDown(object sender, MouseEventArgs e)
+        {
+            _mouseLoc = e.Location;
+        }
+
+        private void FormMouseMove(object sender, MouseEventArgs e)
+        {
+            if (e.Button == MouseButtons.Left)
+            {
+                int dx = e.Location.X - _mouseLoc.X;
+                int dy = e.Location.Y - _mouseLoc.Y;
+                this.Location = new Point(this.Location.X + dx, this.Location.Y + dy);
+            }
+        }
+        #endregion
     }
 }
