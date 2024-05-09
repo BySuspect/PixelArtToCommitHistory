@@ -41,11 +41,12 @@
             this.FolderDialog = new System.Windows.Forms.FolderBrowserDialog();
             this.cbYear = new System.Windows.Forms.ComboBox();
             this.label1 = new System.Windows.Forms.Label();
+            this.pbCommit = new System.Windows.Forms.ProgressBar();
             this.SuspendLayout();
             // 
             // btnCommit
             // 
-            this.btnCommit.Location = new System.Drawing.Point(15, 163);
+            this.btnCommit.Location = new System.Drawing.Point(15, 169);
             this.btnCommit.Name = "btnCommit";
             this.btnCommit.Size = new System.Drawing.Size(92, 23);
             this.btnCommit.TabIndex = 5;
@@ -55,7 +56,7 @@
             // 
             // btnPush
             // 
-            this.btnPush.Location = new System.Drawing.Point(122, 163);
+            this.btnPush.Location = new System.Drawing.Point(122, 169);
             this.btnPush.Name = "btnPush";
             this.btnPush.Size = new System.Drawing.Size(92, 23);
             this.btnPush.TabIndex = 6;
@@ -138,11 +139,22 @@
             this.label1.MouseDown += new System.Windows.Forms.MouseEventHandler(this.FormMouseDown);
             this.label1.MouseMove += new System.Windows.Forms.MouseEventHandler(this.FormMouseMove);
             // 
+            // pbCommit
+            // 
+            this.pbCommit.ForeColor = System.Drawing.Color.GreenYellow;
+            this.pbCommit.Location = new System.Drawing.Point(15, 149);
+            this.pbCommit.Name = "pbCommit";
+            this.pbCommit.Size = new System.Drawing.Size(199, 14);
+            this.pbCommit.TabIndex = 0;
+            this.pbCommit.MouseDown += new System.Windows.Forms.MouseEventHandler(this.FormMouseDown);
+            this.pbCommit.MouseMove += new System.Windows.Forms.MouseEventHandler(this.FormMouseMove);
+            // 
             // MainPage
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(279, 202);
+            this.Controls.Add(this.pbCommit);
             this.Controls.Add(this.cbYear);
             this.Controls.Add(this.BtnImagePick);
             this.Controls.Add(this.btnGitFolderSelect);
@@ -176,5 +188,6 @@
         private System.Windows.Forms.FolderBrowserDialog FolderDialog;
         private System.Windows.Forms.ComboBox cbYear;
         private System.Windows.Forms.Label label1;
+        public System.Windows.Forms.ProgressBar pbCommit;
     }
 }

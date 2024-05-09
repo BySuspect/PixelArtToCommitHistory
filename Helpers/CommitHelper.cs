@@ -2,13 +2,13 @@
 using System.Collections.Generic;
 using System.Drawing;
 using System.Threading.Tasks;
-using PixelArtToCommitHistory.Pages;
+using System.Windows.Forms;
 
 namespace PixelArtToCommitHistory.Helpers
 {
     public static class CommitHelper
     {
-        private static ProgressPage pPage;
+        public static ProgressBar CommitProgressBar { get; set; }
 
         public static async Task StartCommit(string imagePath, string folderPath, int year)
         {
@@ -20,10 +20,7 @@ namespace PixelArtToCommitHistory.Helpers
             if (width != 53 || height != 7)
                 throw new Exception("Image size is too big. Max size is 7x51");
 
-            pPage = new ProgressPage();
-            pPage.pbar.Value = 0;
-
-            pPage.Show();
+            CommitProgressBar.Value = 0;
             var dates = new List<DateTime>();
             var graph = DateHelper.GetDateGraphByYear(year);
 
@@ -36,12 +33,11 @@ namespace PixelArtToCommitHistory.Helpers
                     if (colorChar == '*')
                         dates.Add(graph[x, y]);
                 }
-                pPage.pbar.Value = MathC.TransformNumber(x, 0, width, 0, 10);
+                CommitProgressBar.Value = MathC.TransformNumber(x, 0, width, 0, 10);
             }
             await buildPixelArt(dates, folderPath);
 
-            pPage.pbar.Value = 100;
-            pPage.Close();
+            CommitProgressBar.Value = 100;
         }
 
         private static char ConvertPixel(Color color)
@@ -63,11 +59,11 @@ namespace PixelArtToCommitHistory.Helpers
                     $"git commit --allow-empty --date=\"{formattedDate}\" -m \"{date.ToString("dd:mm:yyyy")}\"";
 
                 CMDHelper.runCMD(command, folderPath);
-                pPage.pbar.Value = MathC.TransformNumber(
+                CommitProgressBar.Value = MathC.TransformNumber(
                     dates.IndexOf(date),
                     0,
                     dates.Count,
-                    30,
+                    10,
                     100
                 );
             }

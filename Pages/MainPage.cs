@@ -25,6 +25,8 @@ namespace PixelArtToCommitHistory.Pages
             cbYear.Items.AddRange(yearList.ToArray());
 
             cbYear.SelectedIndex = 0;
+
+            CommitHelper.CommitProgressBar = pbCommit;
         }
 
         private async void btnCommit_Click(object sender, EventArgs e)
@@ -149,7 +151,7 @@ namespace PixelArtToCommitHistory.Pages
                     )
                     {
                         Bitmap image = new Bitmap(FileDialog.FileName);
-                        if (image.Width == 51 && image.Height == 7)
+                        if (image.Width == 53 && image.Height == 7)
                         {
                             txtImagePath.Text = FileDialog.FileName;
                         }
