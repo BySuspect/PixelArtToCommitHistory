@@ -6,7 +6,6 @@
 
 ## Preview
 
-![Preview](https://i.imgur.com/YGPGI6C.png)
 
 If you get an error upon launching, install [.NET Framework 4.7.2](https://dotnet.microsoft.com/en-us/download/dotnet-framework/net472).
 
@@ -26,3 +25,8 @@ In situations where irreversible consequences may occur while using or after usi
 - Write the path of your edited `empty_template.png` or any of sample pixel arts into the second input.
 - Then, if you think everything is fine, click the `Commit` button and wait for the progress to finish.
 - After that, simply press `Push` to push the repository to your GitHub account, and you're done.
+
+## Here is some samples
+
+![Preview](https://i.imgur.com/LtponN6.png)
+![Preview](https://i.imgur.com/TD8iYYe.png)
